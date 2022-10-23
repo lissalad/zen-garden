@@ -13,91 +13,109 @@ html {
 	margin: 0;
 	padding: 0;
 	}
+
 body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
+	font-family: SFProText;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	margin: 0; 
 	padding: 0;
 	}
+
+/* x padding */
+.summary, .preamble, .main {
+  padding: 0 74px;
+}
+
 p { 
 	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
 	}
 
+a {
+  color: #0066CC;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 /* specific divs */
 .page-wrapper { 
-	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
+	/* background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;  */
+	/* padding: 0 175px 0 110px;   */
 	margin: 0; 
 	position: relative;
+  
 	}
 
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
-
-header h1 { 
-	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
 header {
-	padding-top: 20px;
-	height: 87px;
+  background:#1D1D1F;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 20px 74px;
+  align-items: end;
+  color: #F5F5F7;
+}
+
+header > h1, header > h2 { 
+  opacity: 0.8;
+  margin: 0;
+  font-weight: lighter;
+
+}
+
+header > h2 {
+  margin-left: 20px;
+  font-size: 14px;
+  margin-bottom: 2px;
+  font-weight: lighter;
 }
 
 .summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
+  background-image: url("css.png");
+  background-repeat: no-repeat;
+  background-position: 370px;
+  text-align: center;
+  background-size: 200px;
+  padding: 40px 350px 40px 620px;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 500px; */
+
+}
+
+.summary > p:first-child {
+  font-size: 32px;
+  line-height: 1.5;
+  text-align: center;
+  /* text-indent: 35px; */
+  /* display: flex; */
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* height: 300px; */
+}
+
+.summary > p > abbr {
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: bolder;
+  width: 100%;
+}
+
+.preamble {
+  background:rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}
+
+h3 { 
+	/* font: italic normal 1.4em georgia, sans-serif; */
+  font-size: 42px;
+  font-weight: normal;
+  padding: 20px 0px;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
 	}
+
+/* 
 .summary p {
 	font: italic 1.1em/2.2 georgia; 
 	text-align: center;
@@ -110,6 +128,7 @@ header {
 .supporting {	
 	padding-left: 10px; 
 	margin-bottom: 40px;
+  background-color: antiquewhite;
 	}
 
 footer { 
@@ -124,7 +143,9 @@ footer a:link, footer a:visited {
 	position: absolute; 
 	top: 0; 
 	right: 0;
+  background-color: azure;
 	}
+
 .sidebar .wrapper { 
 	font: 10px verdana, sans-serif; 
 	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
@@ -192,3 +213,29 @@ footer a:link, footer a:visited {
 	width: 148px; 
 	height: 110px;
 	}
+
+  a:link { 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #B7A5DF;
+    }
+  
+  a:visited { 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #D4CDDC;
+    }
+  
+  a:hover, a:focus, a:active { 
+    text-decoration: underline; 
+    color: #9685BA;
+    }
+  
+  abbr {
+    border-bottom: none;
+    } 
+
+@font-face {
+  font-family: SFProText;
+  src: url(SF-Pro-Display-Light.woff);
+} */
