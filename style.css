@@ -21,13 +21,17 @@ body {
 	padding: 0;
 	}
 
-/* x padding */
-.summary, .preamble, .main {
-  padding: 0 74px;
+/* SECTION x padding */
+header, .summary, .preamble, .explanation, .participation, .benefits, .requirements {
+  padding: 0 200px;
+
 }
 
 p { 
 	margin-top: 0; 
+  /* max-width: 70vw; */
+  font-size: 22px;
+  font-weight: lighter;
 	}
 
 a {
@@ -42,7 +46,9 @@ a {
 	/* padding: 0 175px 0 110px;   */
 	margin: 0; 
 	position: relative;
-  
+  background-color: rgb(22, 22, 22);
+  line-height: 1.5;
+
 	}
 
 header {
@@ -59,7 +65,6 @@ header > h1, header > h2 {
   opacity: 0.8;
   margin: 0;
   font-weight: lighter;
-
 }
 
 header > h2 {
@@ -70,27 +75,25 @@ header > h2 {
 }
 
 .summary {
+  background-color: white;
   background-image: url("css.png");
   background-repeat: no-repeat;
-  background-position: 370px;
+  background-position: 50% 50px;
   text-align: center;
   background-size: 200px;
-  padding: 40px 350px 40px 620px;
+  padding: 40px 90px;
   display: flex;
   flex-direction: column;
-  /* max-width: 500px; */
-
+  align-items: center;
 }
 
 .summary > p:first-child {
   font-size: 32px;
   line-height: 1.5;
   text-align: center;
-  /* text-indent: 35px; */
-  /* display: flex; */
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* height: 300px; */
+  padding: 240px 100px;
+  padding-bottom: 0;
 }
 
 .summary > p > abbr {
@@ -101,19 +104,91 @@ header > h2 {
 }
 
 .preamble {
-  background:rgb(0, 0, 0);
-  color: white;
   text-align: center;
+  background-image: url("zen.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  /* height: 400px; */
+  background-position: 87% 60%; 
+  padding: 40px 90px;
 }
 
 h3 { 
-	/* font: italic normal 1.4em georgia, sans-serif; */
+  color: rgb(255, 255, 255);
   font-size: 42px;
   font-weight: normal;
-  padding: 20px 0px;
 	letter-spacing: 1px; 
-	margin-bottom: 0; 
+	margin-bottom: 40px;
+  margin-top: 0; 
+  width: 100%;
 	}
+
+.explanation > h3 {
+  color: rgb(34, 34, 34);
+  margin-top: 100px;
+}
+
+#zen-explanation {
+  margin-top:0;
+  background-color: white;
+
+}
+
+.preamble > p {
+  max-width: 70%;
+  font-size: 22px;
+  font-weight: lighter;
+  color: rgb(195, 195, 195);
+}
+
+.main {
+/* it'd be cool to do grid maybe */
+}
+
+.explanation {
+  background-image: url("ideas.png");
+  background-repeat: repeat-x;
+
+  /* WHAT?? */
+  background-position: center -60px;
+  background-size: 500px;
+  padding: 40px 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.explanation > p {
+  max-width: 40%;
+
+}
+
+.participation {
+  color: white;
+}
+
+.sidebar {
+  display:none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color:#508783;
+  height: 100vh;
+  padding: 10px 20px;
+  width: 200px;
+}
+
+.design-selection > h3, .design-archives > h3, .zen-resources > h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin: 0;
+}
 
 /* 
 .summary p {
