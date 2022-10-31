@@ -26,15 +26,24 @@ body {
 }
 
 /* SECTION x padding */
+
+
+
+
+@media only screen and (min-width: 800px) {
+  header, .summary, .preamble, .explanation, .participation, .benefits, .requirements {
+    padding: 40px 120px 90px 120px;
+  }
+}
+
 header, .summary, .preamble, .explanation, .participation, .benefits, .requirements {
-  padding: 40px 120px 90px 120px;
+  padding: 40px 40px 90px 40px;
 }
 
 /* odd sections */
 .summary, .explanation, .benefits {
   background-color: white;
   color: rgb(34, 34, 34);
-
 }
 
 p { 
@@ -93,7 +102,7 @@ header > h2 {
   line-height: 1.5;
   text-align: center;
   flex-direction: column;
-  padding: 240px 100px;
+  padding: 240px 0px;
   padding-bottom: 0;
 }
 
@@ -211,6 +220,31 @@ h3 {
 ul {
   margin: 0;
 }
+
+[role=contentinfo] {
+  text-align: center;
+  /* width:max-content; */
+  padding: 20px 2px;
+  /* background-color: rgb(60, 60, 60); */
+}
+
+footer {
+  background-color: rgb(134, 134, 134);
+  position: relative;
+  bottom: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+footer > a {
+  /* border-color: white; */
+  /* border-bottom: 2px solid; */
+  color: black;
+}
+
+
 
 /* 
 .summary p {
