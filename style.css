@@ -17,28 +17,23 @@ html {
 body { 
 	font-family: SFProText;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.5;
 	margin: 0; 
 	padding: 0;
   background-color: rgb(22, 22, 22);
   color: white;
+  
 }
 
 /* SECTION x padding */
 
-
-
-
-@media only screen and (min-width: 800px) {
   header, .summary, .preamble, .explanation, .participation, .benefits, .requirements {
     padding: 40px 120px 90px 120px;
   }
-}
 
-header, .summary, .preamble, .explanation, .participation, .benefits, .requirements {
-  padding: 40px 40px 90px 40px;
-}
+
+
 
 /* odd sections */
 .summary, .explanation, .benefits {
@@ -49,6 +44,7 @@ header, .summary, .preamble, .explanation, .participation, .benefits, .requireme
 p { 
 	margin-top: 0; 
   font-weight: lighter;
+  max-width: 45vw;
 }
 
 a {
@@ -66,10 +62,11 @@ a {
 header {
   background:#1D1D1F;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
   align-items: end;
-  padding: 20px 74px;
+  padding: 20px 120px;
   color: #F5F5F7;
 }
 
@@ -83,7 +80,9 @@ header > h2 {
   margin-left: 20px;
   font-size: 14px;
   margin-bottom: 2px;
-  font-weight: lighter;
+  font-style:italic;
+  font-weight: bold;
+  margin-bottom: 7px;
 }
 
 .summary {
@@ -102,7 +101,8 @@ header > h2 {
   line-height: 1.5;
   text-align: center;
   flex-direction: column;
-  padding: 240px 0px;
+  max-width: 760px;
+  margin-top: 250px;
   padding-bottom: 0;
 }
 
@@ -114,12 +114,21 @@ header > h2 {
 }
 
 .preamble {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
   background-image: url("zen.png");
   background-size: 230px;
   background-repeat: no-repeat;
   /* height: 400px; */
-  background-position: 87% 60%; 
+  background-position: 89% 80%; 
+  
+}
+
+.preamble > p {
+  width: 770px;
+  margin: 30px 0 ;
 }
 
 h3 { 
@@ -175,14 +184,25 @@ h3 {
   align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-size: 20px;
 }
 
 .participation > p {
   max-width: 32%;
-  font-size: 16px;
 }
 
 .benefits {
+  background-image: url("help.png");
+  background-repeat: no-repeat;
+  background-position: 20% 50px;
+  background-size: 300px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits > p {
+  margin-left: auto;
 
 }
 
@@ -198,23 +218,25 @@ h3 {
 /* } */
 
 
-
-
-
 .sidebar {
   display:none;
   position: fixed;
+  /* display:flex; */
+  flex-direction: column;
+  height: fit-content;
   top: 0;
   right: 0;
-  background-color:#508783;
-  height: 100vh;
+  background-color:#629e9abd;
   padding: 10px 20px;
   width: 200px;
+  font-size: 16px;
 }
 
 .design-selection > h3, .design-archives > h3, .zen-resources > h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 14px;
+  margin: 0px;
+  margin-top: 20px;
+
 }
 
 ul {
@@ -229,7 +251,7 @@ ul {
 }
 
 footer {
-  background-color: rgb(134, 134, 134);
+  background-color: rgb(57, 57, 57);
   position: relative;
   bottom: 0;
   padding: 20px;
@@ -241,10 +263,23 @@ footer {
 footer > a {
   /* border-color: white; */
   /* border-bottom: 2px solid; */
-  color: black;
+  color: rgb(206, 206, 206);
 }
 
+@media only screen and (max-width: 800px) {
 
+ .summary, .preamble, .explanation, .participation, .benefits, .requirements {
+    padding: 40px;
+  }
+}
+
+abbr {
+  text-decoration: none;
+}
+
+[role=contentinfo] {
+  margin: 60px auto -60px auto;
+}
 
 /* 
 .summary p {
@@ -344,29 +379,9 @@ footer a:link, footer a:visited {
 	width: 148px; 
 	height: 110px;
 	}
-
-  a:link { 
-    font-weight: bold; 
-    text-decoration: none; 
-    color: #B7A5DF;
-    }
-  
-  a:visited { 
-    font-weight: bold; 
-    text-decoration: none; 
-    color: #D4CDDC;
-    }
-  
-  a:hover, a:focus, a:active { 
-    text-decoration: underline; 
-    color: #9685BA;
-    }
-  
-  abbr {
-    border-bottom: none;
-    } 
+*/
 
 @font-face {
   font-family: SFProText;
   src: url(SF-Pro-Display-Light.woff);
-} */
+} 
